@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MusicCatalogAPI.Models;
+using MusicCatalogAPI.Models.Dtos;
 using MusicCatalogAPI.Repositories;
 using System;
 using System.Collections.Generic;
