@@ -31,7 +31,7 @@ namespace MusicCatalogAPI.Controllers
             return Ok(genders);
         }
         [HttpGet("{id:guid}")]
-        public async Task<ActionResult<List<Gender>>> GetGender(Guid id)
+        public async Task<ActionResult<Gender>> GetGender(Guid id)
         {
             var gender = await _repo.GetById(id);
             if (gender == null)

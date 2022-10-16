@@ -31,7 +31,7 @@ namespace MusicCatalogAPI.Controllers
             return Ok(artists);
         }
         [HttpGet("{id:guid}")]
-        public async Task<ActionResult<List<Artist>>> GetArtist(Guid id)
+        public async Task<ActionResult<Artist>> GetArtist(Guid id)
         {
             var artist = await _repo.GetById(id);
             if (artist == null)

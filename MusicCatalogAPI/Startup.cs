@@ -33,6 +33,8 @@ namespace MusicCatalogAPI
             services.AddTransient<IDatabase, MySqlDatabase>(x => new MySqlDatabase(Configuration.GetConnectionString("Default")));
             services.AddScoped<IRepository<Artist>, ArtistRepository>();
             services.AddScoped<IRepository<Gender>, GenderRepository>();
+            services.AddScoped<IRepository<Music>, MusicRepository>();
+            services.AddScoped<IRepository<Album>, AlbumRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
