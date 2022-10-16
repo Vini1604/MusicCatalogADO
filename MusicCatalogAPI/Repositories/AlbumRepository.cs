@@ -45,7 +45,8 @@ namespace MusicCatalogAPI.Repositories
                 "inner join artist art " +
                 "on alb.ArtistId = art.ArtistId " +
                 "inner join gender g " +
-                "on alb.GenderId = g.GenderId";
+                "on alb.GenderId = g.GenderId " +
+                "order by art.ArtistName, alb.AlbumName";
             using (_db)
             {
                 var cmd = new MySqlCommand(query, _db._connection);

@@ -35,6 +35,7 @@ namespace MusicCatalogAPI
             services.AddScoped<IRepository<Gender>, GenderRepository>();
             services.AddScoped<IRepository<Music>, MusicRepository>();
             services.AddScoped<IRepository<Album>, AlbumRepository>();
+            services.AddScoped<IAlbumMusicRepository, AlbumMusicRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
